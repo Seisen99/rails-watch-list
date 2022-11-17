@@ -730,6 +730,11 @@ terser@^5.14.1:
     commander "^2.20.0"
     source-map-support "~0.5.20"
 
+uikit@^3.15.13:
+  version "3.15.13"
+  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.15.13.tgz#d1470caf686661b8afa76b34d2e97f7c8d0326f3"
+  integrity sha512-XvrIbr+6udxO6v+TOWB0tCUzvadsupltBMEdOvd5jnErzdjx5MmmFlHkkoQaAvC7Fr02ZftM93TailbiEIcU5Q==
+
 update-browserslist-db@^1.0.9:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/update-browserslist-db/-/update-browserslist-db-1.0.10.tgz#0f54b876545726f17d00cd9a2561e6dade943ff3"
