@@ -1,0 +1,16 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to "Watch List", root_path, class: "navbar-brand" %>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="ms-auto flex">
+        <form class="flex my-2 my-lg-0" action="movies">
+          <input class="form-control me-2" title="query" type="search" placeholder="Search Movie" name="query" aria-label="Search" value="<%= params[:query] %>">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</nav>
