@@ -6,7 +6,7 @@
     <h1>Create a new <strong>bookmark</strong> !</h1>
     <%= simple_form_for  [ @list, @bookmark ] do |f| %>
       <%= f.input :comment %>
-      <%= f.association :movie, as: :autocomplete, source: autocomplete_movies_path %>
+      <%= f.association :movie %>
       <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %>
   </div>
