@@ -1,5 +1,6 @@
  <div class="container m-5">
   <h1 class="text-center"><%= @list.name %></h1>
+    <div class='col-4'> <%= link_to "Delete List", list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this film from your list ?"}, class: "btn btn-primary" %></div>
 
   <p class="text-center text-align">bookmarks</p>
 
