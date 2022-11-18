@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 rando = 2
-while rando <= 60000
+while rando <= 100
 
   rando += 1
 
