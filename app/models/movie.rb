@@ -2,7 +2,7 @@
 
 class Movie < ApplicationRecord
   has_many :bookmarks
-  has_one_attached :poster_url
+  #has_one_attached :poster_url
   # validates :title, uniqueness: true
   validates :title, :overview, presence: true
 
