@@ -5,20 +5,16 @@
 
   <div class='row text-center'>
     <div class="col-8">
-      <% @list.bookmarks.each do |b| %>
-        <div class='col-4'> <%= b.comment %></div>
-        <div class='col-4'> <%= b.movie.title %></div>
-        <div class='col-4'> <%= b.movie.rating %> / 10 </div>
-        <div class='col-4'> <%= b.movie.overview %></div>
-        <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
-          <div>
-            <div class="uk-overflow-hidden">
-              <img src="<%= b.movie.poster_url %>" width="800" alt="Example image" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
-            </div>
-          </div>
-        </div>
-        <% end %>
+      <% @list.movies.each do |movie| %>
+        <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+        <div class='col-4'> <%= bookmark.comment %></div>
+        <div class='col-4'> <%= movie.title %></div>
+        <div class='col-4'> <%= movie.rating %> / 10 </div>
+        <div class='col-4'> <%= movie.overview %></div>
+        <div class='col-4'> <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this film from your list ?"}, class: "btn btn-primary" %></div>
+        <img src="<%= movie.poster_url %>" width="800" alt="Example image" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+      <% end %>
     </div>
   </div>
 
-<button class="btn btn-primary btn-color=white"> <%= link_to 'New Bookmark', new_list_bookmark_path(@list) %></button>
+<button> <%= link_to 'New Bookmark', new_list_bookmark_path(@list),  class: "btn btn-primary" %></button>

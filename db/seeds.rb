@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-rando = 40000
-while rando <= 50000
+rando = 50000
+while rando <= 60000
 
   rando += 1
 
@@ -14,7 +14,7 @@ while rando <= 50000
 
   movies = JSON.parse(URI.open(url).read)
   p "Trying to add : #{movies['id']} to database..."
-  unless !movies['original_title'].nil? && !movies['overview'].nil? && !movies['vote_average'].nil? && movies['overview'] != ''
+  unless !movies['original_title'].nil? && !movies['overview'].nil? && !movies['vote_average'].nil? && movies['overview'] != '' && movies['overview'] != ' '
     next
   end
 
