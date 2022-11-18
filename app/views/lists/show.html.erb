@@ -8,11 +8,12 @@
       <% @list.bookmarks.each do |b| %>
         <div class='col-4'> <%= b.comment %></div>
         <div class='col-4'> <%= b.movie.title %></div>
-        <div class='col-4'> <%= b.movie.rating %></div>
+        <div class='col-4'> <%= b.movie.rating %> / 10 </div>
+        <div class='col-4'> <%= b.movie.overview %></div>
         <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
           <div>
             <div class="uk-overflow-hidden">
-              <img src="<%= b.movie.poster_url %>" width="1800" height="1200" alt="Example image" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+              <img src="<%= b.movie.poster_url %>" width="800" alt="Example image" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
             </div>
           </div>
         </div>
@@ -20,14 +21,4 @@
     </div>
   </div>
 
-  <p class="btn btn-outline-success my-2 my-sm-0"> <%= link_to 'New Bookmark', new_list_bookmark_path(@list), class:'bt btn-primary m4' %></p>
-
-
-
-<div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
-    <div>
-        <div class="uk-overflow-hidden">
-            <img src="images/dark.jpg" width="1800" height="1200" alt="Example image" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
-        </div>
-    </div>
-</div>
+<button class="btn btn-primary btn-color=white"> <%= link_to 'New Bookmark', new_list_bookmark_path(@list) %></button>
