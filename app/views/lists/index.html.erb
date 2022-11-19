@@ -1,20 +1,18 @@
-<h1>Your Lists</h1>
-<div>
-<ul>
-
-
-<% @lists.each do |list| %>
-
-
-<div><li><%= link_to list.name, list_path(list) %></li></div>
-<div><li> <img src="<%= list.movies.first.poster_url %>" width="500" alt="Example image"></li></div>
-<% end %>
-
-</ul>
+<div class="container">
+  <div class = "ok" style = "margin-bot : 500px;">
+    <%= link_to "My lists", lists_path, class: "Button Yellow" %>
+    <%= link_to "New list", new_list_path, class: "Button Red" %>
+  </div>
+  <div class="x">
+    <% @lists.each do |list| %>
+      <div class="card" style="width : 30%">
+        <img class="image-card" src="<%= list.movies.first.poster_url %>" class="card-img-top" alt="..."> <h1 class="polux"><%= list.name %></h1>
+        <div class="card-body">
+          <div class="link">
+            <%= link_to "Click me Baby", list_path(list), class: "Button" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-
-
-
-<%= link_to "My lists", lists_path, class: "btn btn-primary" %>
-<%= link_to "New list", new_list_path, class: "btn btn-primary" %>
