@@ -1,3 +1,14 @@
 .navbar {
   color:rgb(15, 24, 197);
+  background-color: blue;
+}
+.navbar-lewagon {
+  justify-content: space-between;
+  background: grey;
+}
+
+
+.navbar-lewagon .navbar-brand img {
+
+  object-fit:fill;
 }

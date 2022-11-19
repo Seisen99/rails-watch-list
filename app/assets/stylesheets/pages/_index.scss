@@ -1,13 +1,23 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
 .x {
   display:flex
 
 }
+.card{
+  margin-top: 20px;
+  border-radius: 10%;
+  margin-left:15px;
+  height: 200px;
+  width: 400px;
+  border_radius: 10%;
+}
 
 .image-card {
   object-fit: contain;
+  border-radius: 10%;
 
 }
 
@@ -50,7 +60,7 @@ h1 em {
   display:flex;
   justify-content:space-between;
   margin-bottom: 50px;
-  width:90%;
+  padding: none;
 
 }
 

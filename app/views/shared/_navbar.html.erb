@@ -1,20 +1,47 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-  <%= link_to "Watch List", root_path, class: "navbar-brand" %>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <%= link_to "Movies List", movies_path, class: "navbar-brand" %>
-      <div class="ms-auto flex">
-        <div class = "ok" style = "margin-bot : 500px;">
-    <%= link_to "Watch List", lists_path, class: "Button" %>
-    <%= link_to "Movies List", new_list_path, class: "Button" %>
-        </div>
-        <form class="flex my-2 my-lg-0" action="movies">
-          <input class="form-control me-2" title="query" type="search" placeholder="Search Movie" name="query" aria-label="Search" value="<%= params[:query] %>">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-
+<%# <nav class="navbar navbar-expand-lg"> %>
+  <%# <div class="container-fluid"> %>
+  <%# <%= link_to "Watch List", root_path, class: "navbar-brand" %>
+    <%# <div class="collapse navbar-collapse" id="navbarSupportedContent"> %>
+    <%# <%= link_to "Movies List", movies_path, class: "navbar-brand" %>
+      <%# <div class="ms-auto flex"> %>
+        <%# <div class = "ok" style = "margin-bot : 500px;"> %>
+    <%# <%= link_to "Watch List", lists_path, class: "Button" %>
+    <%# <%= link_to "Movies List", new_list_path, class: "Button" %>
+        <%# </div> %>
+        <%# <form class="flex my-2 my-lg-0" action="movies"> %>
+          <%# <input class="form-control me-2" title="query" type="search" placeholder="Search Movie" name="query" aria-label="Search" value="<%= params[:query] %>
+          <%# <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> %>
+        <%# </form> %>
+<%#  %>
+      <%# </div> %>
+    <%# </div> %>
+  <%# </div> %>
+<%# </nav> %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class = "jeanmi d-flex justify-content-between w-100%">
+      <div class="d-flex">
+          <form  action="movies">
+            <input class="form-control me-2" title="query" type="search" placeholder="Search Movie" name="query" aria-label="Search" value="<%= params[:query] %>">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </form>
+          <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://media0.giphy.com/media/StKiS6x698JAl9d6cx/giphy.gif?cid=ecf05e473a591ba53b0e5c3d313bcf7846bcbeb99872163f&rid=giphy.gif&ct=g" />
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+            </div>
+          </li>
+      </div>
+      <div class="bob">
+          <%= link_to "Watch List", lists_path, class: "Button" %>
+          <%= link_to "Movies List", movies_path, class: "Button" %>
       </div>
     </div>
   </div>
-</nav>
+</div>

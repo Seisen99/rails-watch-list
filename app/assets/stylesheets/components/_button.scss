@@ -7,7 +7,7 @@ a {
 
 .Button {
   position: relative;
-  top: 0px;
+  border-top-right-radius: 0px;
   padding: 15px 25px;
   border: solid #1a1a1a 3px;
   border-radius: 20px;
@@ -34,22 +34,22 @@ a {
   background: #ddd;
 }
 .Yellow {
-  background: #ffc300;
+  background: #0000ff;
 }
 .Yellow:hover {
-  background: #efb300;
+  background: #007fef;
 }
 .Yellow:active {
-  background: #dfa300;
+  background: #df00df;
 }
 .Red {
-  background: #d22b2b;
+  background: #682bd2;
 }
 .Red:hover {
-  background: #c21b2b;
+  background: #c21b71;
 }
 .Red:active {
-  background: #b20b2b;
+  background: #f0f0f0;
 }
 
 ::selection {

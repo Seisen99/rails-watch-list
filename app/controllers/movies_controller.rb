@@ -34,5 +34,4 @@ class MoviesController < ApplicationController
       @movies = Movie.all.sort_by(&:title)
     end
   end
-
 end

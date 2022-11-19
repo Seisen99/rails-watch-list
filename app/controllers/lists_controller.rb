@@ -4,7 +4,6 @@ class ListsController < ApplicationController
   before_action :search_movie, only: %i[index show new create]
   def index
     @lists = List.all
-
   end
 
   def show
@@ -33,7 +32,6 @@ class ListsController < ApplicationController
     @list.destroy
     redirect_to lists_path
   end
-
 
   private
 
