@@ -10,8 +10,8 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @bookmark = Bookmark.new
     @movies = Movie.all.sort_by(&:title)
+    @movie = Movie.find(params[:id])
     @bookmarks = Bookmark.all
-    @@bookmark = @bookmark
   end
 
   def new
